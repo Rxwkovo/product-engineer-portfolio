@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Forma — Product Intake</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/questions.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="/" aria-label="Forma home"><span class="brand-mark">✦</span> forma<span class="brand-dot">.</span></a>
+      <div class="workspace-label">WORKSPACE</div>
+      <div class="nav-item active"><span class="nav-icon">▦</span> Intake studio</div>
+      <div class="nav-item"><span class="nav-icon">◫</span> Drafts <span class="soon">DEMO</span></div>
+      <div class="sidebar-bottom"><span class="avatar">P</span><div><strong>Personal workspace</strong><small>Portfolio demo</small></div></div>
+    </aside>
+    <main class="main">
+      <header class="topbar"><span>Intake studio <span class="slash">/</span> New request</span><span class="top-badge">PERSONAL PROJECT / DEMO</span></header>
+      <div class="content">
+        <div class="hero-row"><div><div class="eyebrow"><span class="sparkle">✦</span> FROM IDEA TO CLEAR BRIEF</div><h1>Start with the messy version.</h1><p class="lede">Describe your idea in plain language. Forma turns it into fields you can review, refine, and confirm.</p></div><div class="step-rail"><span id="step-1" class="step active">1 <b>Describe</b></span><span class="step-line"></span><span id="step-2" class="step">2 <b>Review</b></span><span class="step-line"></span><span id="step-3" class="step">3 <b>Confirm</b></span></div></div>
+        <div class="grid">
+          <section class="panel input-panel"><div class="panel-head"><div><span class="section-kicker">01 / INPUT</span><h2>What are you planning?</h2></div><span class="soft-tag">Natural language</span></div><label for="request">Your request</label><textarea id="request">Plan a half-day customer workshop for our product team in Seattle on October 22. We want to gather feedback on the new onboarding flow, keep the tone friendly, and send a summary report afterward.</textarea><div class="hint"><span>✧</span> Include what matters. You can fix the details in the next step.</div><div class="input-bottom"><span id="mode-label" class="mode-label">Checking model mode…</span><button id="generate" class="primary">Generate draft <span>→</span></button></div></section>
+          <section class="panel output-panel"><div class="panel-head"><div><span class="section-kicker">02 / OUTPUT</span><h2>Structured brief</h2></div><span id="state-pill" class="status-pill">Awaiting input</span></div><div id="empty" class="empty"><span class="empty-icon">✦</span><h3>A clearer brief is one step away</h3><p>Generate a draft to see structured fields and any questions that still need an answer.</p><div class="tiny-flow"><span>Describe</span><i>→</i><span>Review</span><i>→</i><span>Confirm</span></div></div><div id="form-wrap" class="hidden"><div id="mode-note" class="mode-note"></div><div class="fields"><div class="field full"><label for="title">PROJECT TITLE</label><input id="title"></div><div class="field full"><label for="goal">GOAL</label><input id="goal"></div><div class="field"><label for="audience">AUDIENCE</label><input id="audience"></div><div class="field"><label for="date">DATE</label><input id="date"></div><div class="field"><label for="location">LOCATION</label><input id="location"></div><div class="field"><label for="format">FORMAT</label><input id="format"></div><div class="field full"><label for="deliverables">DELIVERABLES <small>comma separated</small></label><input id="deliverables"></div><div class="field full"><label for="tone">TONE</label><input id="tone"></div></div><div class="questions"><h3>Still to decide</h3><ul id="questions"></ul></div><div class="form-actions"><button id="reset" class="ghost">Start over</button><button id="confirm" class="primary">Confirm brief <span>✓</span></button></div></div><div id="confirmed" class="hidden confirmed"><div class="check">✓</div><h3>Brief confirmed</h3><p>Your reviewed fields are ready to share or hand off.</p><pre id="json-preview"></pre><div class="form-actions"><button id="edit" class="ghost">Back to edit</button><button id="download" class="primary">Download JSON <span>↓</span></button></div></div></section>
+        </div>
+        <div class="footer-note"><span>✦</span> Human review is the final step. Generated fields are editable before confirmation.</div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

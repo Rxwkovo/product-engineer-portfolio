@@ -1,0 +1,12 @@
+contact_id,company,contact_name,email,signup_date,region,annual_value,status
+1001,Aster Studio,Maya Chen,maya@example.invalid,2026-03-04,West,12000,Active
+1002,Northwind Labs,Leo Grant,leo@example.invalid,03/05/2026,East,8500,Active
+1003, Blue Harbor Co ,Nia Patel,nia@example.invalid,2026/03/07,West,5400,Trial
+1004,Orbit Works,Ava Ruiz,ava@example.invalid,March 08 2026,South,,Active
+1005,Lumen House,Noah Kim,noah@example.invalid,2026-03-09,,3000,Trial
+1006,Aster Studio,Iris Wong,iris@example.invalid,03/10/2026,West,7600,Active
+1007,Maple Digital,Ezra Moore,ezra@example.invalid,2026/03/11,North,4200,Trial
+1008,Pine Labs,Remy Park,remy@example.invalid,March 12 2026,East,9100,Active
+1008,Pine Labs,Remy Park,remy@example.invalid,March 12 2026,East,9100,Active
+1009,Cloud Nine,Sara Fox,sara@example.invalid,2026-03-13,North,6200,
+1010,Orbit Works,Tom Reed,tom@example.invalid,03/14/2026,South,7900,Active
