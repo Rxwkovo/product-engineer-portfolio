@@ -17,7 +17,7 @@ See what changed. Spreadsheet cleanup with a clear change report.
 ## Image order
 
 1. `cover.png` - Cover composed from the actual product presentation page.
-2. `01-upload.jpg` - Product presentation hero.
+2. `01-upload.png` - Product presentation hero.
 3. `02-sample-selected.jpg` - Fictional sample selected.
 4. `03-cleaning-report.jpg` - Actual processing result and rule ledger.
 5. `04-before-after-export.jpg` - Original/cleaned samples and export control.

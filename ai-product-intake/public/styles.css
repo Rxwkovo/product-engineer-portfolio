@@ -63,9 +63,9 @@ textarea:focus,input:focus{border-color:var(--violet);box-shadow:0 0 0 3px #654b
 .empty-state strong{font-size:20px;letter-spacing:-.04em;margin-top:20px}
 .empty-state p{font-size:13px;line-height:1.5;color:var(--muted);max-width:260px;margin:8px 0 0}
 .paper-stack{width:144px;height:132px;position:relative}
-.paper-stack>div{position:absolute;width:95px;height:115px;background:white;border:1px solid var(--ink);top:6px;left:24px;transform:rotate(-10deg)}
-.paper-stack>div:nth-child(2){transform:rotate(7deg);left:31px;background:#eee8ff}
-.paper-stack>.front-sheet{transform:rotate(0);left:24px;background:var(--sheet);box-shadow:5px 5px 0 #25253613;padding:22px 13px}
+.paper-stack>div{position:absolute;width:95px;height:115px;background:white;border:1px solid var(--ink);top:6px;left:24px;transform:none}
+.paper-stack>div:nth-child(2){transform:none;left:31px;background:#eee8ff}
+.paper-stack>.front-sheet{transform:none;left:24px;background:var(--sheet);box-shadow:5px 5px 0 #25253613;padding:22px 13px}
 .front-sheet span{display:block;height:3px;background:#c9c4d3;margin:0 0 13px;width:65px}
 .front-sheet span:nth-child(2){width:48px}
 .front-sheet span:nth-child(3){width:58px}

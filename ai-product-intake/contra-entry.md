@@ -17,7 +17,7 @@ Make the draft yours. Describe, review, decide, confirm.
 ## Image order
 
 1. `cover.png` - Cover composed from the actual product presentation page.
-2. `01-describe.jpg` - Product presentation hero.
+2. `01-describe.png` - Product presentation hero.
 3. `02-structured-draft.jpg` - Local parser output with a missing-date question.
 4. `03-review-edit.jpg` - Edited fields and a saved human decision.
 5. `04-confirmed.jpg` - Confirmed JSON with review notes retained.
