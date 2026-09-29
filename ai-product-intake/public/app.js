@@ -72,6 +72,7 @@ $('generate').addEventListener('click', async () => {
   const button = $('generate'); button.disabled = true; button.textContent = 'Building draft…';
   $('error').classList.add('hidden'); $('error').textContent = '';
   document.querySelector('.draft-pane').classList.add('is-building');
+  document.querySelector('.draft-pane').setAttribute('aria-busy', 'true');
   try {
     let result;
     if (publicDemo) {
@@ -86,7 +87,7 @@ $('generate').addEventListener('click', async () => {
     mode = result.mode; render(result.data);
     document.querySelectorAll('.field').forEach((el,i)=>el.style.setProperty('--field-i',i));
   } catch (error) { $('error').textContent = error.message; $('error').classList.remove('hidden'); }
-  finally { document.querySelector('.draft-pane').classList.remove('is-building'); button.disabled = false; button.innerHTML = 'Build editable draft <span aria-hidden="true">↗</span>'; }
+  finally { document.querySelector('.draft-pane').classList.remove('is-building'); document.querySelector('.draft-pane').setAttribute('aria-busy', 'false'); button.disabled = false; button.innerHTML = 'Build editable draft <span aria-hidden="true">↗</span>'; }
 });
 $('reset').addEventListener('click', () => stage(1));
 $('confirm').addEventListener('click', () => { draft = collect(); $('json-preview').textContent = JSON.stringify(draft, null, 2); stage(3); });

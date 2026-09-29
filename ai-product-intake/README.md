@@ -1,4 +1,4 @@
-# Forma — AI-Assisted Product Intake Workflow
+# Forma - AI-Assisted Product Intake Workflow
 
 **Personal Project / Demo.** A small, generic workflow for turning a natural language product or event request into a structured brief, then reviewing, editing, confirming, and exporting it. It is not a reproduction of a client's private product.
 

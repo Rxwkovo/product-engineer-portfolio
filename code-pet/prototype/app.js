@@ -11,6 +11,7 @@ const states = {
 };
 
 function setExpanded(expanded) {
+  if (!expanded && usageCard.contains(document.activeElement)) $('pet-toggle').focus();
   widget.classList.toggle('expanded', expanded);
   widget.classList.toggle('compact', !expanded);
   $('pet-toggle').setAttribute('aria-expanded', String(expanded));

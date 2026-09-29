@@ -1,7 +1,7 @@
 
 (() => {
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
-  const isReduced=()=>reduced.matches||document.body.classList.contains('reduce-motion');
+  const isReduced=()=>reduced.matches||innerHeight<=600||document.body.classList.contains('reduce-motion');
   document.querySelectorAll('.product-hero h1').forEach(title=>{
     const split=node=>{[...node.childNodes].forEach(child=>{if(child.nodeType===3){const frag=document.createDocumentFragment();child.textContent.split(/(\s+)/).forEach(word=>{if(!word.trim()){frag.append(document.createTextNode(word));return;}const clip=document.createElement('span');clip.className='title-word-wrap';const span=document.createElement('span');span.className='title-word';span.textContent=word;clip.append(span);frag.append(clip);});child.replaceWith(frag);}else if(child.nodeType===1)split(child);});};
     title.setAttribute('aria-label',title.textContent);split(title);[...title.querySelectorAll('.title-word')].forEach((word,i)=>word.style.setProperty('--word-i',i));

@@ -6,7 +6,7 @@ The pages follow a product presentation sequence: a large introduction, one scro
 - **Prism:** a comparison wipe reveals a clean fictional table, followed by illustrative rule counts. The actual working report uses separate pipeline data; illustration counts are not represented as pipeline results.
 - **Code Pet:** the companion shifts to make room for detail, then shrinks back so focus returns to the workspace. The real interactive prototype offers explicit states and stale-data handling.
 
-Scroll progress uses requestAnimationFrame interpolation and stops scheduling when settled. Animations affect transforms/opacity or a small isolated illustration. Reduced-motion mode removes the pinned scroll sequence and exposes all three chapters as static content. Code Pet also offers an explicit Reduce motion switch. No automatic carousel, autoplay media or forced scroll is used.
+Scroll progress uses requestAnimationFrame interpolation and stops scheduling when settled. Animations affect transforms/opacity or a small isolated illustration. Reduced-motion mode removes the pinned scroll sequence and exposes all three chapters as static content. Code Pet also offers an explicit Reduce motion switch. Viewports shorter than 600 pixels use a complete static story so chapters cannot be clipped by a pinned scene. Expanded/compact details retain their width during transitions on phones as well as desktop; only their presentation moves. No automatic carousel, autoplay media or forced scroll is used.
 
 Body and small text use locally bundled Bricolage Grotesque. Original heading families and weight remain. Product hero scale was increased for the newly requested presentation format.
 

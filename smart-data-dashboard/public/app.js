@@ -59,6 +59,7 @@ $('process').addEventListener('click', async () => {
   button.disabled = true;
   button.textContent = 'Cleaning…';
   document.querySelector('.source-panel').classList.add('is-processing');
+  document.querySelector('.report-panel').setAttribute('aria-busy', 'true');
   $('error').classList.add('hidden');
   try {
     const form = new FormData();
@@ -70,6 +71,7 @@ $('process').addEventListener('click', async () => {
   } catch (error) { showError(error.message); }
   finally {
     document.querySelector('.source-panel').classList.remove('is-processing');
+    document.querySelector('.report-panel').setAttribute('aria-busy', 'false');
     button.disabled = false;
     button.innerHTML = 'Clean & inspect <span aria-hidden="true">↗</span>';
   }
