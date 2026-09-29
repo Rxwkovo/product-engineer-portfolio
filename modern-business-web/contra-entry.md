@@ -1,27 +1,28 @@
-# Modern Business Web Platform
+# Northstar — One shared direction
 
 - **Project type:** Personal Project / Demo
-- **Role:** Responsive web design, UI implementation, template customization
-- **Skills:** HTML, CSS, JavaScript, Bootstrap, responsive design, UI implementation
-**Project link:** https://github.com/Rxwkovo/product-engineer-portfolio/tree/main/modern-business-web
+- **Role:** Product presentation design, UI implementation, motion and responsive refinement
+- **Skills:** HTML, CSS, JavaScript, responsive design, SVG animation, interaction design, accessibility
+- **Public experience:** https://rxwkovo-product-portfolio.ilovetaffy5556.chatgpt.site/northstar/
+- **Project source:** https://github.com/Rxwkovo/product-engineer-portfolio/tree/main/modern-business-web
 
-## Description (129 words)
+## Description
 
-Northstar is a fictional SaaS business website created as a personal portfolio demo. I started from the MIT-licensed Start Bootstrap Landing Page template and reshaped it into a calmer, more complete product presentation. The site keeps the starter’s responsive structure while replacing its default imagery, copy, forms, and styling with a new brand system and CSS-built product visuals. It includes a focused hero, feature grid, alternating platform sections, illustrative pricing cards, a clear contact-area explanation, and a working mobile menu. I designed the content to show how a growing team might understand the product quickly across desktop and phone screens. The page identifies Northstar as a fictional concept, and the pricing is visibly illustrative. This project demonstrates practical template selection, front-end execution, responsive QA, and attention to honest presentation.
+Northstar is a fictional SaaS website built as a personal portfolio demo. Its central idea is a shared route: a team moves from discovery through useful progress toward a clear destination. I refined a user-provided, AI-assisted route concept into a complete responsive presentation, keeping its mist-blue chart grid, navy typography and purposeful amber accents. The main scroll story synchronizes a moving SVG marker, milestone states and chapter text. An interactive sample workspace lets visitors switch between Discover, Build and Launch to inspect illustrative tasks and decisions. The implementation uses native scrolling, pauses animation work when settled, and offers dark mode, keyboard navigation and complete static alternatives for reduced motion or short screens. Bricolage Grotesque is self-hosted under its open font license. The earlier MIT starter attribution is retained in the source notes. Product details and pricing are explicitly fictional; no customer work or commercial results are claimed.
 
 ## Cover text
 
-A modern, responsive SaaS concept built from an MIT-licensed starter.
+Different paths. One shared direction.
 
 ## Image order
 
-1. `cover.png` — Branded overview with the actual site hero.
-2. `01-hero.png` — Desktop landing hero and CSS-built product visual.
-3. `02-features.png` — Feature grid.
-4. `03-platform.png` — Alternating showcase sections.
-5. `04-pricing.png` — Illustrative pricing layout.
-6. `05-mobile.png` — Mobile hero and navigation viewport.
+1. `cover.png` — Branded composition of the actual route-concept hero.
+2. `01-hero.png` — Desktop hero with the route illustration.
+3. `02-features.png` — Scroll story at its Build stage.
+4. `03-platform.png` — Interactive sample workspace.
+5. `04-pricing.png` — Dark-mode illustrative pricing.
+6. `05-mobile.png` — Actual 390-pixel embedded viewport.
 
 ## Provenance
 
-Start Bootstrap Landing Page v6.0.6 is MIT licensed. Its license is retained in `LICENSE-STARTBOOTSTRAP`; the CSS starter is retained in `css/startbootstrap-landing-page.css`. The site uses system fonts and CSS shapes. It does not include stock photography, external icons, or real client claims.
+See `SOURCE-NOTES.md`, `LICENSE`, `LICENSE-STARTBOOTSTRAP` and `OFL-Bricolage.txt`. The public page is a front-end demonstration; it does not save project tasks or sell a service.

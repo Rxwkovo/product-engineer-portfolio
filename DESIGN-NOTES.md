@@ -18,3 +18,10 @@ Body and small text use locally bundled Bricolage Grotesque. Original heading fa
 - Code Pet expand/collapse and mood/stale states reviewed in the browser.
 - 390-pixel iframe layout reviewed visually; Forma document content width fits its viewport. Browser viewport emulation did not apply on this host, so the narrow embedded viewport was used for that check.
 - The live AI model path requires a server key and has not been exercised. Static public Prism uses a bundled output produced by the Python pipeline and cannot accept arbitrary uploaded files.
+
+
+## Northstar route refinement
+
+The existing Sites Northstar initially used the older Bootstrap-based layout. It now refines the user-provided route concept: the same route metaphor, mist blue, navy and amber, with adjusted typography, spacing, borders, navigation clearance and motion timing. A sample workspace offers Discover / Build / Launch stages with illustrative tasks and decisions. No real project data is saved. The earlier starter's MIT license remains as provenance; the new page does not load Bootstrap.
+
+Review evidence: the desktop hero and Build scroll chapter were inspected in the browser; route progress and chapter text changed together. All three workspace phases rendered their corresponding tasks and decision. The right-arrow key moved focus/selection from Discover to Build. Dark mode changed the body background to the intended navy. The explicit Reduce motion preference exposed all three chapters at opacity 1 with no aria-hidden and removed sticky positioning. JavaScript syntax was checked. The 390-pixel embedded phone layout had a 375-pixel content viewport and equal document width, with no horizontal overflow. Embedded-frame menu clicks were unavailable through this browser connection, so phone menu operation was not verified. No live customers, commercial metrics or transaction flow are represented.

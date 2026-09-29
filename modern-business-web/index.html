@@ -1,39 +1,119 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Northstar is a fictional SaaS website concept for clearer cross-team planning.">
-  <title>Northstar — Clarity for moving teams</title>
-  <!-- Adapted from Start Bootstrap Landing Page (MIT). See LICENSE-STARTBOOTSTRAP. -->
-  <link rel="stylesheet" href="css/startbootstrap-landing-page.css">
-  <link rel="stylesheet" href="css/northstar.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <script src="js/northstar.js" defer></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Northstar is a fictional SaaS website concept about getting teams to the same destination.">
+<title>Northstar — One shared direction</title>
+<link rel="preload" href="bricolage-grotesque.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="css/route-concept.css">
 </head>
 <body>
-  <div class="demo-ribbon">PORTFOLIO DEMO · FICTIONAL PRODUCT</div>
-  <!-- Original template's navigation and masthead structure, restyled for Northstar. -->
-  <nav class="navbar navbar-light bg-light static-top northstar-nav" aria-label="Main navigation">
-    <div class="container nav-inner">
-      <a class="navbar-brand logo" href="#top"><span class="logo-icon">✦</span> northstar<span class="logo-dot">.</span></a>
-      <button id="menu-button" class="menu-button" type="button" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle menu">☰</button>
-      <div id="nav-links" class="nav-links"><a href="#features">Features</a><a href="#platform">Platform</a><a href="#use-cases">Use cases</a><a href="#pricing">Pricing</a></div>
-      <a class="btn btn-primary nav-cta" href="#contact">Explore the concept <span>↗</span></a>
+<a class="skip" href="#main">Skip to content</a>
+<div class="demo"><span>PERSONAL PROJECT / DEMO</span><a href="../">Back to portfolio &nearr;</a></div>
+<nav aria-label="Main navigation"><div class="wrap nav">
+  <a class="logo" href="#top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1l2.6 8.4L23 12l-8.4 2.6L12 23l-2.6-8.4L1 12l8.4-2.6z" fill="#F2B01E" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>Northstar</a>
+  <div class="preferences"><button id="theme" type="button" aria-label="Switch to dark theme">Dark</button><button id="motion" type="button" aria-pressed="false">Reduce motion</button></div>
+  <button class="menu" id="menu" type="button" aria-controls="links" aria-expanded="false" aria-label="Toggle menu">&#9776;</button>
+  <div class="links" id="links"><a href="#features">Features</a><a href="#platform">Platform</a><a href="#use-cases">Use cases</a><a href="#pricing">Pricing</a></div>
+  <a class="btn nav-cta" href="#platform">Try the concept</a>
+</div></nav>
+
+<main id="main"><header id="top"><div class="hero"><div class="wrap-in">
+    <div class="eyebrow">ONE SHARED DIRECTION</div><h1 aria-label="Make progress feel possible."><span class="w" style="--i:0"><span>Make</span></span> <span class="w" style="--i:1"><span>progress</span></span> <span class="w" style="--i:2"><span>feel</span></span> <span class="w" style="--i:3"><span>possible.</span></span></h1>
+    <p class="lede">Bring plans, people, and priorities together in one calm workspace. Northstar gives growing teams a clearer path from idea to action.</p>
+    <div class="actions"><a class="btn" href="#story">Follow the journey</a><a class="btn line" href="#platform">Try the workspace</a></div>
+    <p class="fine">Made for thoughtful teams, built as a portfolio concept.</p>
+  </div>
+  <div class="map"><div class="map-caption"><span>THE ROUTE / SAMPLE PROJECT</span><span class="live-status">Build in progress</span></div>
+    <svg viewBox="0 0 480 400" role="img" aria-label="A route from Discover through Build toward the Northstar destination. Discover is done, Build is in progress, Launch is next.">
+      <path class="route-solid" pathLength="1" d="M50 340 C130 340 120 230 210 230" fill="none" stroke="#0F1F3D" stroke-width="4" stroke-linecap="round" style="stroke:var(--ink)"/>
+      <path d="M210 230 C300 230 290 120 370 116 L420 70" fill="none" stroke-width="3" stroke-dasharray="3 9" stroke-linecap="round" style="stroke:var(--ink)"/>
+      <circle cx="50" cy="340" r="11" style="fill:var(--go)"/><path d="M45 340l4 4 7-8" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+      <circle cx="210" cy="230" r="15" style="fill:var(--star);stroke:var(--ink)" stroke-width="3"/>
+      <circle cx="370" cy="116" r="9" style="fill:var(--panel);stroke:var(--ink)" stroke-width="3"/>
+      <g font-family="system-ui,sans-serif" font-size="15" style="fill:var(--ink)">
+        <text x="70" y="372" font-weight="700">Discover</text><text x="70" y="390" font-size="12.5" style="fill:var(--muted)">Done</text>
+        <text x="232" y="270" font-weight="700">Build</text><text x="232" y="288" font-size="12.5" style="fill:var(--muted)">3 priorities in motion</text>
+        <text x="318" y="152" font-weight="700">Launch</text><text x="318" y="170" font-size="12.5" style="fill:var(--muted)">Next milestone, Friday</text>
+      </g>
+      <circle cx="430" cy="60" r="34" style="fill:var(--star)" opacity=".22"/>
+      <path d="M430 28l8 22 22 8-22 8-8 22-8-22-22-8 22-8z" style="fill:var(--star);stroke:var(--ink)" stroke-width="2.5" stroke-linejoin="round"/>
+    </svg>
+  </div>
+</div></header>
+
+<section class="story" id="story" aria-label="How Northstar guides a project from idea to launch"><div class="pin"><div class="wrap stage">
+  <div class="story-copy"><div class="eyebrow">FROM A FIRST IDEA TO A SHARED ARRIVAL</div><div class="steps">
+    <div class="s on" data-chapter="Discover"><h2>Shape the opportunity.</h2><p>Bring the idea, the people, and the open questions into one place before anything is built.</p></div>
+    <div class="s" data-chapter="Build"><h2>Make useful progress.</h2><p>Owners, priorities, and updates stay visible, so the next step is never a guess.</p></div>
+    <div class="s" data-chapter="Launch"><h2>Share what is ready.</h2><p>Hand off with a clear record of what was decided and why. The team arrives together.</p></div>
+  </div>
+  <div class="journey-status" aria-hidden="true"><span id="chapter-count">01 / 03</span><span id="chapter-name">Discover</span></div></div>
+  <svg class="rt" id="rt" viewBox="0 0 600 520" role="img" aria-label="A route that fills in as the project moves from Discover to Build to Launch, ending at the Northstar.">
+    <path id="base" d="M60 440 C190 440 170 290 300 280 C430 270 400 150 500 100" fill="none" stroke-width="3" stroke-dasharray="2 10" stroke-linecap="round" style="stroke:var(--ink)" opacity=".35"/>
+    <path id="prog" d="M60 440 C190 440 170 290 300 280 C430 270 400 150 500 100" fill="none" stroke-width="5" stroke-linecap="round" style="stroke:var(--ink)"/>
+    <g id="stars" transform="translate(500 100)"><circle r="46" style="fill:var(--star)" class="glow"/><path class="pt" d="M0-30l8 22 22 8-22 8-8 22-8-22-22-8 22-8z" style="fill:var(--star);stroke:var(--ink)" stroke-width="2.5" stroke-linejoin="round"/></g>
+    <g class="wp" transform="translate(60 440)"><circle r="11"/><text y="38">Discover</text></g><g class="wp" transform="translate(300 280)"><circle r="11"/><text y="38">Build</text></g><g class="wp" transform="translate(461 127)"><circle r="11"/><text y="38">Launch</text></g>
+    <circle id="mk" cx="500" cy="100" r="14" style="fill:var(--star);stroke:var(--ink)" stroke-width="3"/>
+  </svg>
+</div></div></section>
+
+<section id="features"><div class="wrap">
+  <div class="head"><h2>Less noise, more progress.</h2><p>Everything your team needs to move with confidence, without another complicated workspace.</p></div>
+  <ol class="trail">
+    <li><h3>A shared picture</h3><p>Plans, ownership, and updates stay in one view everyone can understand.</p></li>
+    <li><h3>Clear priorities</h3><p>Keep the next meaningful step visible, from first idea to final handoff.</p></li>
+    <li><h3>Room to focus</h3><p>A calmer interface helps teams spend less energy finding the work.</p></li>
+  </ol>
+</div></section>
+
+<section id="platform"><div class="wrap">
+  <div class="row">
+    <div class="text"><h2>See the plan. Feel the progress.</h2><p>Get a simple view of what is happening, who owns the next step, and where a decision is needed. No hunting through disconnected updates.</p><a class="go" href="#use-cases">Explore the workflow</a></div>
+    <div class="board workspace" id="workspace">
+      <div class="workspace-label"><span>INTERACTIVE PREVIEW</span><span>Fictional project</span></div>
+      <h3>One launch. A shared direction.</h3>
+      <div class="phase-tabs" role="tablist" aria-label="Project stage">
+        <button id="tab-discover" role="tab" aria-controls="phase-panel" aria-selected="false" tabindex="-1" data-phase="0">Discover</button>
+        <button id="tab-build" role="tab" aria-controls="phase-panel" aria-selected="true" data-phase="1">Build</button>
+        <button id="tab-launch" role="tab" aria-controls="phase-panel" aria-selected="false" tabindex="-1" data-phase="2">Launch</button>
+      </div>
+      <div id="phase-panel" role="tabpanel" aria-labelledby="tab-build" tabindex="0">
+        <div class="phase-title"><div><span class="phase-kicker" id="phase-kicker">02 / BUILD</span><h4 id="phase-title">Make useful progress.</h4></div><span class="status-pill" id="phase-status">In progress</span></div>
+        <p id="phase-description">Turn decisions into small, owned steps. Keep the next move visible.</p>
+        <ul class="task-list" id="task-list"><li><span class="task-check">&check;</span><div><strong>Align the launch scope</strong><small>Product &middot; Decision recorded</small></div><span class="task-state">Done</span></li><li><span class="task-check current"></span><div><strong>Review the working prototype</strong><small>Design &middot; Thursday</small></div><span class="task-state">Now</span></li><li><span class="task-check"></span><div><strong>Prepare the release notes</strong><small>Operations &middot; Friday</small></div><span class="task-state">Next</span></li></ul>
+        <div class="decision-note"><span>SHARED DECISION</span><p id="decision">Ship the focused core first. Save additional views for a later iteration.</p></div>
+      </div>
+      <p class="workspace-note">Switch stages to explore sample tasks and decisions. This is a front-end concept; no project data is saved.</p>
+      <noscript><p>The Build stage is shown above. Stage switching requires JavaScript.</p></noscript>
     </div>
-  </nav>
-  <header class="masthead" id="top">
-    <div class="container position-relative hero-grid">
-      <div class="hero-copy"><div class="eyebrow"><span class="eyebrow-star">✦</span> ONE PLACE FOR THE WORK THAT MATTERS</div><h1>Make progress feel <em>possible.</em></h1><p>Bring plans, people, and priorities together in one calm workspace. Northstar gives growing teams a clearer path from idea to action.</p><div class="hero-actions"><a class="btn btn-primary btn-lg" href="#platform">See how it works <span>→</span></a><a class="quiet-link" href="#features">Explore features <span>↘</span></a></div><div class="hero-foot"><span class="foot-mark">✧</span><span>Made for thoughtful teams, built as a portfolio concept.</span></div></div>
-      <div class="hero-visual" aria-label="Northstar product concept preview"><div class="glow glow-one"></div><div class="glow glow-two"></div><div class="product-window"><div class="window-top"><span class="window-dots">● ● ●</span><span>Northstar workspace</span><span>⋯</span></div><div class="window-body"><div class="window-sidebar"><span class="mini-logo">✦</span><span class="mini-nav selected">▦</span><span class="mini-nav">◇</span><span class="mini-nav">▤</span><span class="mini-nav">◴</span></div><div class="window-content"><div class="mock-top"><span>Good morning, team <span class="sun">✳</span></span><span class="mock-date">TODAY'S VIEW</span></div><div class="mock-sub">Here's what is moving forward.</div><div class="mock-summary"><div><small>PROJECT HEALTH</small><strong>On track <span>↗</span></strong><div class="spark-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div><div><small>UP NEXT</small><strong>4 priorities</strong><div class="mock-avatars"><b>A</b><b>M</b><b>J</b><b>+2</b></div></div></div><div class="mock-list"><div class="mock-list-title">Your focus this week <span>View all →</span></div><div><i class="check-icon">✓</i><span>Align on the launch plan</span><small>Today</small></div><div><i class="check-icon purple">✦</i><span>Review product feedback</span><small>Wed</small></div><div><i class="check-icon blue">◫</i><span>Share the next milestone</span><small>Fri</small></div></div></div></div></div><div class="floating-note"><span>✦</span><div><strong>Everything in motion</strong><small>One clear view of what comes next</small></div></div></div>
+  </div>
+  <div class="row flip" id="use-cases">
+    <div class="text"><h2>Built around the way teams actually work.</h2><p>From planning a launch to coordinating a handoff, Northstar adapts to the small rituals that keep a team aligned.</p><a class="go" href="#contact">See the concept</a></div>
+    <div class="board">
+      <div class="said"><strong>Decisions, without the drift</strong><p>Capture what matters and keep everyone moving from the same page.</p><div class="chips"><span>Product</span><span>Design</span><span>Operations</span></div></div>
+      <div class="said"><strong>Weekly plan is ready</strong><p>Three priorities, one shared direction.</p></div>
     </div>
-  </header>
-  <!-- Template feature grid, customized content and icon treatment. -->
-  <section class="features-icons bg-light" id="features"><div class="container"><div class="section-heading centered"><span class="section-kicker">BUILT FOR MOMENTUM</span><h2>Less noise. More progress.</h2><p>Everything your team needs to move with confidence, without another complicated workspace.</p></div><div class="row feature-row"><div class="col-lg-4"><div class="feature-card"><span class="feature-icon">▦</span><h3>A shared picture</h3><p>Plans, ownership, and updates stay in one view everyone can understand.</p></div></div><div class="col-lg-4"><div class="feature-card"><span class="feature-icon violet">◇</span><h3>Clear priorities</h3><p>Keep the next meaningful step visible, from first idea to final handoff.</p></div></div><div class="col-lg-4"><div class="feature-card"><span class="feature-icon mint">✧</span><h3>Room to focus</h3><p>A calmer interface helps teams spend less energy finding the work.</p></div></div></div></div></section>
-  <!-- Original alternating showcase pattern, rebuilt with CSS-only concept visuals. -->
-  <section class="showcase" id="platform"><div class="container-fluid p-0"><div class="row g-0 showcase-row"><div class="col-lg-6 order-lg-2 showcase-art"><div class="art-board"><div class="art-tag">PROJECT OVERVIEW</div><h4>A clearer path, together.</h4><div class="progress-line"><span></span></div><div class="art-milestone"><span>01</span><div><strong>Discover</strong><small>Shape the opportunity</small></div><b>✓</b></div><div class="art-milestone"><span>02</span><div><strong>Build</strong><small>Make useful progress</small></div><b>↗</b></div><div class="art-milestone"><span>03</span><div><strong>Launch</strong><small>Share what is ready</small></div><b>·</b></div></div></div><div class="col-lg-6 order-lg-1 my-auto showcase-text"><span class="section-kicker">A WORKSPACE THAT MAKES SENSE</span><h2>See the plan.<br>Feel the progress.</h2><p>Get a simple view of what's happening, who owns the next step, and where a decision is needed. No hunting through disconnected updates.</p><a class="text-link" href="#use-cases">Explore the workflow <span>→</span></a></div></div><div class="row g-0 showcase-row alternate" id="use-cases"><div class="col-lg-6 showcase-art art-two"><div class="note-stack"><div class="note-card"><span class="note-label">TEAM SYNC</span><h4>Decisions, without the drift.</h4><p>Capture what matters and keep everyone moving from the same page.</p><div class="note-pills"><span>Product</span><span>Design</span><span>Operations</span></div></div><div class="note-message"><span class="message-avatar">✦</span><div><strong>Weekly plan is ready</strong><small>3 priorities, one shared direction</small></div><span>↗</span></div></div></div><div class="col-lg-6 my-auto showcase-text"><span class="section-kicker">FLEXIBLE BY DESIGN</span><h2>Built around the way<br>teams actually work.</h2><p>From planning a launch to coordinating a handoff, Northstar adapts to the small rituals that keep a team aligned.</p><a class="text-link" href="#contact">See the concept <span>→</span></a></div></div></div></section>
-  <section class="pricing-section" id="pricing"><div class="container"><div class="section-heading centered"><span class="section-kicker">SIMPLE, BY DESIGN</span><h2>A plan for every stage.</h2><p>Illustrative pricing cards for this fictional product concept. No purchase flow is active.</p></div><div class="pricing-grid"><div class="price-card"><span>STARTER</span><h3>Find your rhythm.</h3><div class="price">$0 <small>/ concept</small></div><p>For a small team finding its shared way of working.</p><ul><li>One workspace</li><li>Shared project view</li><li>Simple milestones</li></ul><a href="#contact" class="price-link">Explore concept <span>→</span></a></div><div class="price-card featured"><span>GROWTH <b>POPULAR</b></span><h3>Move together.</h3><div class="price">$18 <small>/ concept</small></div><p>For teams coordinating more people, plans, and decisions.</p><ul><li>Unlimited projects</li><li>Team priorities</li><li>Progress snapshots</li></ul><a href="#contact" class="price-link">Explore concept <span>→</span></a></div><div class="price-card"><span>STUDIO</span><h3>Make room to scale.</h3><div class="price">Custom</div><p>For larger teams with their own working rhythm.</p><ul><li>Flexible workspaces</li><li>Leadership overview</li><li>Guided setup concept</li></ul><a href="#contact" class="price-link">Explore concept <span>→</span></a></div></div></div></section>
-  <section class="call-to-action" id="contact"><div class="container"><div class="cta-inner"><span class="section-kicker">A CLEARER WAY FORWARD</span><h2>Give your next idea a place to grow.</h2><p>Northstar is a fictional business website built as a portfolio demo. Explore the page design and implementation; no service is being sold here.</p><a class="btn btn-primary btn-lg" href="#top">Back to the top <span>↑</span></a></div></div></section>
-  <footer class="footer bg-light"><div class="container"><div class="footer-grid"><a class="logo" href="#top"><span class="logo-icon">✦</span> northstar<span class="logo-dot">.</span></a><span>Fictional product · Personal Project / Demo</span><span>Template attribution in LICENSE-STARTBOOTSTRAP</span></div></div></footer>
+  </div>
+</div></section>
+
+<section id="pricing"><div class="wrap">
+  <div class="head"><h2>A plan for every stage.</h2><p>Illustrative pricing for this fictional concept. There is no purchase flow.</p></div>
+  <div class="plans">
+    <div class="plan"><div class="tag"></div><h3>Starter</h3><p class="for">For a small team finding its shared way of working.</p><div class="price">$0 <small>concept</small></div><ul><li>One workspace</li><li>Shared project view</li><li>Simple milestones</li></ul><a class="btn line" href="#contact">Explore concept</a></div>
+    <div class="plan pick"><div class="tag">For growing teams</div><h3>Growth</h3><p class="for">For teams coordinating more people, plans, and decisions.</p><div class="price">$18 <small>concept</small></div><ul><li>Unlimited projects</li><li>Team priorities</li><li>Progress snapshots</li></ul><a class="btn" href="#contact">Explore concept</a></div>
+    <div class="plan"><div class="tag"></div><h3>Studio</h3><p class="for">For larger teams with their own working rhythm.</p><div class="price">Custom</div><ul><li>Flexible workspaces</li><li>Leadership overview</li><li>Guided setup concept</li></ul><a class="btn line" href="#contact">Explore concept</a></div>
+  </div>
+</div></section>
+
+<section class="arrive" id="contact"><div class="wrap">
+  <div class="eyebrow">A SHARED ARRIVAL</div><h2>Different paths.<br>One direction.</h2>
+  <p>Northstar is a fictional business website built as a portfolio demo. Explore the page design and implementation; no service is being sold here.</p>
+  <a class="btn" href="#platform">Explore the workspace</a><a class="arrival-source" href="https://github.com/Rxwkovo/product-engineer-portfolio/tree/main/modern-business-web" target="_blank" rel="noopener noreferrer">View implementation &nearr;</a>
+  <svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="52" fill="#F2B01E" opacity=".16"/><path d="M60 8l13 39 39 13-39 13-13 39-13-39-39-13 39-13z" fill="#F2B01E"/></svg>
+</div></section>
+</main><footer><div class="wrap"><span>Northstar, a fictional product and personal project demo.</span><span><a href="https://github.com/Rxwkovo/product-engineer-portfolio/blob/main/modern-business-web/SOURCE-NOTES.md" target="_blank" rel="noopener noreferrer">Design sources &amp; licenses &nearr;</a></span></div></footer>
+<script src="js/route-concept.js" defer></script>
 </body>
 </html>

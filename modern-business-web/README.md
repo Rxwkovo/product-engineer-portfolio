@@ -1,13 +1,18 @@
-# Northstar — Modern Business Web Platform
+# Northstar — One shared direction
 
-**Personal Project / Demo.** Northstar is a fictional SaaS business website concept. It demonstrates responsive layout, UI implementation, and thoughtful customization of an existing commercial-use starter. The product, plans and prices are illustrative; no real customers, testimonials, transactions, or business outcomes are claimed.
+Personal Project / Demo: a fictional SaaS product presentation, refined from a user-provided route concept. No commercial product, customers or results are claimed.
 
-## Template and license
+**[Public experience](https://rxwkovo-product-portfolio.ilovetaffy5556.chatgpt.site/northstar/)**
 
-This project adapts the [Start Bootstrap Landing Page](https://github.com/StartBootstrap/startbootstrap-landing-page) template, version 6.0.6. Its bundled Bootstrap theme CSS remains in `css/startbootstrap-landing-page.css`; the retained template license is in `LICENSE-STARTBOOTSTRAP`. The original navigation, masthead, feature grid and alternating showcase structure informed the layout. I replaced the default copy, photography, signup form, palette and showcase content, added CSS-built product previews, pricing concept cards, mobile menu behavior, and clear portfolio-demo labels. Start Bootstrap publishes this free template under MIT, including commercial use.
+## Included
 
-The custom design uses only system fonts and CSS shapes. No stock photos, icon fonts, external JavaScript or remote assets are required.
+- Mist-blue chart grid, navy type and amber route markers.
+- One native scroll-driven Discover / Build / Launch journey, with synchronized chapter text.
+- A sample workspace with stage tabs, illustrative tasks and recorded decisions.
+- Responsive navigation, light/dark preference and reduced-motion preference.
+- Static fallbacks for reduced motion, short screens and unavailable JavaScript.
+- Self-hosted Bricolage Grotesque; no framework or animation-library dependency.
 
-## View
+Serve this directory with any static HTTP server. `index.html` loads `css/route-concept.css` and `js/route-concept.js`. Theme and motion preferences are stored locally when available; sample tasks are not saved. The portfolio link expects deployment at `/northstar/` below the portfolio root.
 
-Open `index.html` directly in a browser or serve the folder with a local static server. The page has no build step. Narrow the viewport to inspect the mobile navigation and stacked sections.
+See [source notes](SOURCE-NOTES.md) for provenance and scope. The original MIT Start Bootstrap CSS and attribution are retained from the earlier iteration but are not loaded by the current route page.
