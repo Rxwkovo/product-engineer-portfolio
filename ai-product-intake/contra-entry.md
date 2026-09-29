@@ -4,6 +4,7 @@
 - **Role:** Product UX, workflow design, full-stack implementation
 - **Skills:** AI workflows, structured output, JavaScript, Node.js, product design, API integration
 - **Project link:** https://github.com/Rxwkovo/product-engineer-portfolio/tree/main/ai-product-intake
+- **Public experience:** https://rxwkovo-product-portfolio.ilovetaffy5556.chatgpt.site/forma/
 
 ## Description
 

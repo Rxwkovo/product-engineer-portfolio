@@ -5,6 +5,7 @@
 - **Skills:** Product UX, Windows desktop apps, .NET, PowerShell, JavaScript, UI implementation, product iteration
 - **Source project:** https://github.com/Rxwkovo/Codex-Usage-Pet
 - **New interface prototype:** https://github.com/Rxwkovo/product-engineer-portfolio/tree/main/code-pet/prototype
+- **Public experience:** https://rxwkovo-product-portfolio.ilovetaffy5556.chatgpt.site/code-pet/
 
 ## Description
 

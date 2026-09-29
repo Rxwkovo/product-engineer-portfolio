@@ -25,3 +25,9 @@ The new demo code is MIT licensed. The Modern Business Web project retains the S
 ## Product presentation update
 
 Code Pet, Forma and Prism now include large product introductions, native scroll-driven stories, and accessible interactive demos. Their UI is English. See [design and review notes](DESIGN-NOTES.md) for decisions and verification limits.
+
+## Public experiences
+
+[Portfolio](https://rxwkovo-product-portfolio.ilovetaffy5556.chatgpt.site/) · [Code Pet](https://rxwkovo-product-portfolio.ilovetaffy5556.chatgpt.site/code-pet/) · [Forma](https://rxwkovo-product-portfolio.ilovetaffy5556.chatgpt.site/forma/) · [Prism](https://rxwkovo-product-portfolio.ilovetaffy5556.chatgpt.site/prism/) · [Northstar](https://rxwkovo-product-portfolio.ilovetaffy5556.chatgpt.site/northstar/)
+
+The public Forma runs the disclosed browser parser. The public Prism shows a saved Python-generated sample report; arbitrary uploads require the local FastAPI app.

@@ -4,6 +4,7 @@
 - **Role:** Workflow design, Python API development, dashboard UI
 - **Skills:** Python, FastAPI, pandas, Excel, CSV, data cleaning, responsive UI
 - **Project link:** https://github.com/Rxwkovo/product-engineer-portfolio/tree/main/smart-data-dashboard
+- **Public experience:** https://rxwkovo-product-portfolio.ilovetaffy5556.chatgpt.site/prism/
 
 ## Description
 
