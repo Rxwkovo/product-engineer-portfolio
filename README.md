@@ -20,4 +20,8 @@ Each directory includes a Contra-ready `contra-entry.md`, one `cover.png`, and f
 
 ## License and assets
 
-The new demo code is MIT licensed. The Modern Business Web project retains the Start Bootstrap template's MIT license and bundled CSS. Its layout uses no stock images. The other new demos use system fonts and CSS shapes. Code Pet's original repository carries its own MIT license and attribution.
+The new demo code is MIT licensed. The Modern Business Web project retains the Start Bootstrap template's MIT license and bundled CSS. Its layout uses no stock images. The other new demos use locally hosted Bricolage Grotesque under SIL OFL 1.1 and CSS illustrations. See [asset licenses](ASSET-LICENSES.md). Code Pet's original repository carries its own MIT license and attribution.
+
+## Product presentation update
+
+Code Pet, Forma and Prism now include large product introductions, native scroll-driven stories, and accessible interactive demos. Their UI is English. See [design and review notes](DESIGN-NOTES.md) for decisions and verification limits.
