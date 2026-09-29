@@ -1,26 +1,27 @@
-# AI-Assisted Product Intake Workflow
+# Forma - AI-Assisted Product Intake Workflow
 
 - **Project type:** Personal Project / Demo
 - **Role:** Product UX, workflow design, full-stack implementation
 - **Skills:** AI workflows, structured output, JavaScript, Node.js, product design, API integration
-**Project link:** https://github.com/Rxwkovo/product-engineer-portfolio/tree/main/ai-product-intake
+- **Project link:** https://github.com/Rxwkovo/product-engineer-portfolio/tree/main/ai-product-intake
 
-## Description (140 words)
+## Description
 
-Forma is a personal demo for turning a rough product or event request into a brief that a team can actually review. A user describes an idea in natural language; the workflow proposes a structured title, goal, audience, date, location, format, deliverables, tone, and open questions. Every field stays editable, and the brief is only finalized after a human confirms it. The confirmed result can be exported as JSON for the next step in a product workflow. I built the interface, review states, and server endpoint around a clear separation between model output and human decisions. When a model key is configured, the server requests schema-constrained output through the OpenAI Responses API. Without a key, the app labels its local rule-based parser as a demo. It is a generic portfolio concept, with no client-specific logic or claims of production use.
+Forma is a personal product intake demo built around human review. A user starts with a rough event or product request, then receives an editable brief containing a title, goal, audience, date, location, format, deliverables, tone, and open questions. The original request stays beside the working draft so decisions can be checked against the source. Missing details become visible questions; users can save answers as review notes, edit fields, and confirm the final brief before exporting JSON. I designed a product presentation with a scroll-driven words-to-fields story, a focused working surface, clear state changes, and English copy. The Node.js server supports schema-constrained output through the OpenAI Responses API. Without a model key, an explicitly labelled local parser demonstrates the review flow. The screenshots show that parser mode. This is a generic portfolio concept, with no client-specific implementation or production-use claims.
 
 ## Cover text
 
-From a rough idea to a reviewed, structured brief.
+Make the draft yours. Describe, review, decide, confirm.
 
 ## Image order
 
-1. `cover.png` — Interface overview.
-2. `01-describe.png` — Natural language input.
-3. `02-structured-draft.png` — Generated draft in explicitly labelled local demo mode.
-4. `03-review-edit.png` — Human editing fields before confirmation.
-5. `04-confirmed.png` — Confirmed brief and JSON export.
+1. `cover.png` - Cover composed from the actual product presentation page.
+2. `01-describe.jpg` - Product presentation hero.
+3. `02-structured-draft.jpg` - Local parser output with a missing-date question.
+4. `03-review-edit.jpg` - Edited fields and a saved human decision.
+5. `04-confirmed.jpg` - Confirmed JSON with review notes retained.
+6. `05-mobile.jpg` - Responsive interface.
 
 ## Disclosure
 
-The screenshots show the local parser mode. The OpenAI API integration is implemented, but a live model call has not been verified without an API key. No customer data or outcomes are represented.
+The model integration is implemented; a live model call is not verified without a key. Screenshots use fictional requests and explicitly labelled local parser output. No customer data or outcomes are represented.

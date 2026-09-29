@@ -4,7 +4,7 @@ const path = require('node:path');
 
 const PORT = Number(process.env.PORT || 8788);
 const PUBLIC = path.join(__dirname, 'public');
-const MIME = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8' };
+const MIME = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.ttf': 'font/ttf' };
 
 const intakeSchema = {
   type: 'object',
@@ -23,31 +23,7 @@ const intakeSchema = {
   additionalProperties: false
 };
 
-function clean(value) { return String(value || '').trim().slice(0, 4000); }
-
-function demoExtract(input) {
-  const text = clean(input);
-  const firstSentence = text.split(/[.!?]/)[0].trim();
-  const isWorkshop = /workshop/i.test(text);
-  const date = text.match(/\b(?:on|for)\s+((?:Mon|Tues|Wednes|Thurs|Fri|Satur|Sun)day(?:,?\s+\w+\s+\d{1,2})?|\w+\s+\d{1,2}(?:,?\s+\d{4})?)\b/i);
-  const audience = text.match(/\bfor\s+([^,.]+?)(?=\s+(?:on|in|at|to|with)\b|[,.]|$)/i);
-  const location = text.match(/\b(?:in|at)\s+([A-Z][\w\s-]+?)(?=\s+(?:on|for|with|to)\b|[,.]|$)/);
-  const output = {
-    title: isWorkshop ? 'Customer discovery workshop' : (firstSentence.replace(/^(plan|create|organize|build)\s+(an?|the)\s+/i, '').slice(0, 72) || 'New product request'),
-    goal: /feedback/i.test(text) ? 'Collect actionable feedback and define next steps' : 'Clarify the request and agree on a useful outcome',
-    audience: audience ? audience[1].trim() : '',
-    date: date ? date[1].trim() : '',
-    location: location ? location[1].trim() : '',
-    format: isWorkshop ? 'Facilitated workshop' : (/online|remote|virtual/i.test(text) ? 'Remote session' : ''),
-    deliverables: /summary|report/i.test(text) ? ['Summary report'] : [],
-    tone: /friendly/i.test(text) ? 'Friendly' : (/formal/i.test(text) ? 'Formal' : ''),
-    open_questions: []
-  };
-  for (const [key, question] of Object.entries({ audience: 'Who is the intended audience?', date: 'When should this happen?', location: 'Where will this happen?', format: 'What format should it use?' })) {
-    if (!output[key]) output.open_questions.push(question);
-  }
-  return output;
-}
+const { clean, demoExtract } = require('./public/demo-parser.js');
 
 function validated(data) {
   const out = {};
@@ -97,7 +73,7 @@ const server = http.createServer(async (req, res) => {
   }
   if (req.method !== 'GET') return send(res, 405, { error: 'Method not allowed' });
   const pathname = req.url === '/' ? '/index.html' : new URL(req.url, 'http://localhost').pathname;
-  if (!['/index.html', '/styles.css', '/questions.css', '/app.js'].includes(pathname)) return send(res, 404, 'Not found', 'text/plain');
+  if (!['/index.html', '/styles.css', '/questions.css', '/motion.css', '/motion.js', '/app.js', '/demo-parser.js', '/bricolage-grotesque.ttf'].includes(pathname)) return send(res, 404, 'Not found', 'text/plain');
   const file = path.join(PUBLIC, pathname.slice(1));
   fs.readFile(file, (err, data) => err ? send(res, 404, 'Not found', 'text/plain') : send(res, 200, data, MIME[path.extname(file)]));
 });

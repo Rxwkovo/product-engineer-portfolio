@@ -3,30 +3,62 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Forma — Product Intake</title>
+  <meta name="description" content="Forma turns a rough request into an editable, human-reviewed brief. Personal project demo.">
+  <title>Forma — Make the draft yours</title>
   <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="/questions.css">
+  <script src="/demo-parser.js" defer></script>
   <script src="/app.js" defer></script>
+<link rel="stylesheet" href="/motion.css">
+<script src="/motion.js" defer></script>
 </head>
 <body>
-  <div class="shell">
-    <aside class="sidebar">
-      <a class="brand" href="/" aria-label="Forma home"><span class="brand-mark">✦</span> forma<span class="brand-dot">.</span></a>
-      <div class="workspace-label">WORKSPACE</div>
-      <div class="nav-item active"><span class="nav-icon">▦</span> Intake studio</div>
-      <div class="nav-item"><span class="nav-icon">◫</span> Drafts <span class="soon">DEMO</span></div>
-      <div class="sidebar-bottom"><span class="avatar">P</span><div><strong>Personal workspace</strong><small>Portfolio demo</small></div></div>
-    </aside>
-    <main class="main">
-      <header class="topbar"><span>Intake studio <span class="slash">/</span> New request</span><span class="top-badge">PERSONAL PROJECT / DEMO</span></header>
-      <div class="content">
-        <div class="hero-row"><div><div class="eyebrow"><span class="sparkle">✦</span> FROM IDEA TO CLEAR BRIEF</div><h1>Start with the messy version.</h1><p class="lede">Describe your idea in plain language. Forma turns it into fields you can review, refine, and confirm.</p></div><div class="step-rail"><span id="step-1" class="step active">1 <b>Describe</b></span><span class="step-line"></span><span id="step-2" class="step">2 <b>Review</b></span><span class="step-line"></span><span id="step-3" class="step">3 <b>Confirm</b></span></div></div>
-        <div class="grid">
-          <section class="panel input-panel"><div class="panel-head"><div><span class="section-kicker">01 / INPUT</span><h2>What are you planning?</h2></div><span class="soft-tag">Natural language</span></div><label for="request">Your request</label><textarea id="request">Plan a half-day customer workshop for our product team in Seattle on October 22. We want to gather feedback on the new onboarding flow, keep the tone friendly, and send a summary report afterward.</textarea><div class="hint"><span>✧</span> Include what matters. You can fix the details in the next step.</div><div class="input-bottom"><span id="mode-label" class="mode-label">Checking model mode…</span><button id="generate" class="primary">Generate draft <span>→</span></button></div></section>
-          <section class="panel output-panel"><div class="panel-head"><div><span class="section-kicker">02 / OUTPUT</span><h2>Structured brief</h2></div><span id="state-pill" class="status-pill">Awaiting input</span></div><div id="empty" class="empty"><span class="empty-icon">✦</span><h3>A clearer brief is one step away</h3><p>Generate a draft to see structured fields and any questions that still need an answer.</p><div class="tiny-flow"><span>Describe</span><i>→</i><span>Review</span><i>→</i><span>Confirm</span></div></div><div id="form-wrap" class="hidden"><div id="mode-note" class="mode-note"></div><div class="fields"><div class="field full"><label for="title">PROJECT TITLE</label><input id="title"></div><div class="field full"><label for="goal">GOAL</label><input id="goal"></div><div class="field"><label for="audience">AUDIENCE</label><input id="audience"></div><div class="field"><label for="date">DATE</label><input id="date"></div><div class="field"><label for="location">LOCATION</label><input id="location"></div><div class="field"><label for="format">FORMAT</label><input id="format"></div><div class="field full"><label for="deliverables">DELIVERABLES <small>comma separated</small></label><input id="deliverables"></div><div class="field full"><label for="tone">TONE</label><input id="tone"></div></div><div class="questions"><h3>Still to decide</h3><ul id="questions"></ul></div><div class="form-actions"><button id="reset" class="ghost">Start over</button><button id="confirm" class="primary">Confirm brief <span>✓</span></button></div></div><div id="confirmed" class="hidden confirmed"><div class="check">✓</div><h3>Brief confirmed</h3><p>Your reviewed fields are ready to share or hand off.</p><pre id="json-preview"></pre><div class="form-actions"><button id="edit" class="ghost">Back to edit</button><button id="download" class="primary">Download JSON <span>↓</span></button></div></div></section>
-        </div>
-        <div class="footer-note"><span>✦</span> Human review is the final step. Generated fields are editable before confirmation.</div>
+  <div class="app-shell">
+    <header class="masthead">
+      <a class="brand" href="/" aria-label="Forma home"><span class="brand-glyph" aria-hidden="true">f</span><span>forma<span class="brand-period">.</span></span></a>
+      <div class="masthead-center"><span class="live-dot" aria-hidden="true"></span> An idea is allowed to be unfinished.</div>
+      <span class="demo-label">PERSONAL PROJECT / DEMO</span>
+    </header>
+    <section class="product-hero"><span class="eyebrow">FORMA / PERSONAL PROJECT DEMO</span><h1>Make the draft <em>yours.</em></h1><p>An unfinished idea. A useful structure. Your final say.</p><div class="hero-links"><a href="#experience">Try the experience</a><a href="#story">Discover the idea ↓</a></div><div class="hero-object" aria-hidden="true"><div class="product-object forma-object"><div class="object-bar"><span>FORMA / FROM WORDS TO A WORKING BRIEF</span><i></i></div><div class="object-body"><div class="raw-sentence">A <mark>customer workshop</mark> for <mark>our product team</mark> in <mark>Seattle</mark>. Gather feedback. Leave the date open.</div><div class="brief-grid"><div class="brief-cell"><small>FORMAT</small><strong>Customer workshop</strong></div><div class="brief-cell"><small>AUDIENCE</small><strong>Product team</strong></div><div class="brief-cell"><small>LOCATION</small><strong>Seattle</strong></div><div class="brief-cell open"><small>DATE / YOUR DECISION</small><strong>Still open</strong></div></div><div class="ownership-seal">✓ Reviewed by you</div></div></div></div><small class="hero-disclosure">Public and local demo modes use a disclosed parser; an AI connection is optional.</small></section><section id="story" class="motion-story" data-story="forma" aria-label="Product story"><div class="motion-pin"><div class="story-heading"><span class="eyebrow">SCROLL TO EXPLORE THE IDEA</span><h2>A sentence becomes a starting point.</h2></div><div class="motion-stage" aria-hidden="true"><div class="product-object forma-object"><div class="object-bar"><span>FORMA / FROM WORDS TO A WORKING BRIEF</span><i></i></div><div class="object-body"><div class="raw-sentence">A <mark>customer workshop</mark> for <mark>our product team</mark> in <mark>Seattle</mark>. Gather feedback. Leave the date open.</div><div class="brief-grid"><div class="brief-cell"><small>FORMAT</small><strong>Customer workshop</strong></div><div class="brief-cell"><small>AUDIENCE</small><strong>Product team</strong></div><div class="brief-cell"><small>LOCATION</small><strong>Seattle</strong></div><div class="brief-cell open"><small>DATE / YOUR DECISION</small><strong>Still open</strong></div></div><div class="ownership-seal">✓ Reviewed by you</div></div></div></div><div class="story-chapters"><article class="story-chapter is-current"><span>01 / YOUR WORDS</span><h3>Begin before it is perfect.</h3><p>Describe what you know. The original request remains visible throughout review.</p></article><article class="story-chapter "><span>02 / A WORKING STRUCTURE</span><h3>See the shape of the idea.</h3><p>Facts become fields. Missing information stays visibly open instead of being invented.</p></article><article class="story-chapter "><span>03 / YOUR FINAL SAY</span><h3>Make the decision yours.</h3><p>Edit, answer and confirm. The exported brief reflects your decisions.</p></article></div><div class="story-track" aria-hidden="true"><i></i></div></div></section>
+<main class="workspace">
+      <div class="intro">
+        <div class="intro-copy"><span class="eyebrow">THE HUMAN-IN-CONTROL INTAKE STUDIO <span aria-hidden="true">/ 01</span></span><h1>Make the draft <em>yours.</em></h1><p>Begin with an unpolished request. Forma finds a useful structure, then leaves every decision open for your review.</p></div>
+        <div class="intro-aside" aria-label="Workflow principle"><span class="aside-line" aria-hidden="true"></span><strong>AI proposes.<br>You decide.</strong><small>Nothing becomes final until you confirm it.</small></div>
       </div>
+
+      <section id="experience" class="experience-intro"><span class="eyebrow">THE WORKING DEMO</span><h2>Try the working flow.</h2><p>Describe a request, review an editable draft and export your confirmed brief.</p></section>      <nav class="stage-nav" aria-label="Workflow progress"><span id="step-1" class="stage active"><b>01</b> Describe</span><span id="step-2" class="stage"><b>02</b> Review & edit</span><span id="step-3" class="stage"><b>03</b> Confirm</span></nav>
+<div class="work-grid">
+        <section class="request-pane" aria-labelledby="request-title">
+          <div class="pane-heading"><span class="section-index">01 / YOUR WORDS</span><span class="pane-status">SOURCE MATERIAL</span></div>
+          <h2 id="request-title">Start with the messy version.</h2><p class="pane-intro">An honest first pass is enough. Include what you know; leave the rest for review.</p>
+          <label for="request">Describe the request</label>
+          <textarea id="request" spellcheck="true">Plan a half-day customer workshop for our product team in Seattle. We want to gather feedback on the new onboarding flow, keep the tone friendly, and send a summary report afterward.</textarea>
+          <div class="request-bottom"><span id="mode-label" class="mode-label" role="status">Checking model mode…</span><button id="generate" class="action-button" type="button">Build editable draft <span aria-hidden="true">↗</span></button></div>
+          <p id="error" class="error-note hidden" role="alert"></p>
+          <div class="source-footnote"><span aria-hidden="true">✳</span> Keep the original request visible while you review the draft.</div>
+        </section>
+        <section class="draft-pane" aria-labelledby="draft-title">
+          <div class="pane-heading"><span class="section-index">02 / WORKING BRIEF</span><span id="state-pill" class="state-pill" role="status">Awaiting input</span></div>
+          <h2 id="draft-title">A brief you can stand behind.</h2><p class="pane-intro">Structured fields are a starting point, not a final answer.</p>
+          <div id="empty" class="empty-state"><div class="paper-stack" aria-hidden="true"><div></div><div></div><div class="front-sheet"><span></span><span></span><span></span><i>?</i></div></div><strong>The first draft is waiting.</strong><p>Describe a request, then inspect and change what Forma finds.</p></div>
+          <div id="form-wrap" class="hidden">
+            <div id="mode-note" class="mode-note"></div>
+            <div class="field-grid">
+              <div class="field wide"><label for="title">PROJECT TITLE</label><input id="title"></div>
+              <div class="field wide"><label for="goal">GOAL</label><input id="goal"></div>
+              <div class="field"><label for="audience">AUDIENCE</label><input id="audience"></div>
+              <div class="field"><label for="date">DATE</label><input id="date"></div>
+              <div class="field"><label for="location">LOCATION</label><input id="location"></div>
+              <div class="field"><label for="format">FORMAT</label><input id="format"></div>
+              <div class="field wide"><label for="deliverables">DELIVERABLES <small>separate with commas</small></label><input id="deliverables"></div>
+              <div class="field wide"><label for="tone">TONE</label><input id="tone"></div>
+            </div>
+            <div class="questions"><div class="questions-head"><span class="margin-mark" aria-hidden="true">?</span><div><h3>Decisions still open</h3><p>Save answers as review notes, and update the fields above as needed.</p></div></div><ul id="questions"></ul><div id="review-notes" class="review-notes hidden" aria-label="Saved review notes" aria-live="polite"></div></div>
+            <div class="form-actions"><button id="reset" type="button" class="quiet-button">Start over</button><button id="confirm" type="button" class="action-button">Confirm my brief <span aria-hidden="true">→</span></button></div>
+          </div>
+          <div id="confirmed" class="confirmed hidden"><span class="confirmed-mark" aria-hidden="true">✓</span><h3>Confirmed by you.</h3><p>The exported JSON reflects your edits. Unresolved questions remain visible.</p><pre id="json-preview"></pre><div class="form-actions"><button id="edit" type="button" class="quiet-button">Back to edit</button><button id="download" type="button" class="action-button">Download JSON <span aria-hidden="true">↓</span></button></div></div>
+        </section>
+      </div>
+      <footer class="app-footer"><span>FORMA / PERSONAL DEMO</span><span>Human review is the final step. Generated fields are always editable.</span></footer>
     </main>
   </div>
 </body>
