@@ -1,30 +1,28 @@
-# Code Pet — Interactive Desktop Companion
+# Code Pet - Interactive Desktop Companion
 
 - **Project type:** Personal Project
 - **Role:** Product design, Windows desktop development, interaction design
-- **Skills:** Windows desktop apps, PowerShell, .NET, UI implementation, product iteration, API integration
-- **Project link:** https://github.com/Rxwkovo/Codex-Usage-Pet
-**Source product name:** Codex Usage Pet
+- **Skills:** Product UX, Windows desktop apps, .NET, PowerShell, JavaScript, UI implementation, product iteration
+- **Source project:** https://github.com/Rxwkovo/Codex-Usage-Pet
+- **New interface prototype:** https://github.com/Rxwkovo/product-engineer-portfolio/tree/main/code-pet/prototype
 
-## Description (138 words)
+## Description
 
-Code Pet is a personal Windows desktop companion that turns Codex usage information into a small, expressive interface. I shaped the product around a simple question: how can a status indicator feel useful without interrupting someone’s work? The pet shows five-hour and weekly usage in a compact view, with animated poses and mood changes that make the state easy to notice at a glance. The expanded view provides more detail, while settings let people tune motion, appearance, and update behavior. The application reads usage data through Codex’s local App Server and keeps the desktop experience focused on quick checks. I iterated on the character artwork, frame timing, layout, and settings based on visual reviews and implementation feedback. This project demonstrates product judgment, Windows UI work, and the care required to turn an evolving prototype into a coherent tool.
+Code Pet is a personal Windows desktop companion for quick Codex usage checks. Its existing application combines expressive character artwork with five-hour and weekly usage information. For this portfolio iteration, I built a separate browser prototype to explore a quieter interaction model: the companion stays at the edge of the workspace, expands when details are needed, and returns to a compact presence afterward. A scroll-driven product story introduces this attention cycle. The prototype retains the mascot, English copy, accessible controls, and a reduced-motion option. Illustrative mood states show how the interface responds as capacity changes, while a stale-data state displays unavailable values explicitly. The Windows project and the browser exploration are presented separately, and the prototype uses sample values without an account connection. This case study demonstrates product judgment, interaction design, and the practical refinement of an existing personal product.
 
 ## Cover text
 
-An expressive Windows companion for quick Codex usage checks.
+Quietly useful. An expressive companion with details on demand.
 
-## Image order and captions
+## Image order
 
-1. `cover.png` — Case study cover using the actual product preview.
-2. `01-desktop-view.png` — Expanded desktop view; numbers shown are illustrative sample values.
-3. `02-interaction-states.png` — Existing motion and expression preview sheet.
-4. `03-settings.png` — Existing Windows settings interface.
-5. `04-compact-mood.png` — Compact and mood states from the product previews.
+1. `cover.png` - Cover composed from the new browser prototype.
+2. `01-desktop-view.jpg` - Full prototype overview, with sample-data disclosure.
+3. `02-compact-view.jpg` - Compact interaction state.
+4. `03-mood-state.jpg` - Illustrative low-capacity mood.
+5. `04-stale-data.jpg` - Unavailable values when data is stale.
+6. `03-settings.png` - Existing Windows settings capture, labelled as the original application.
 
-## Provenance and publishing notes
+## Publishing notes
 
-- Product captures are derived from the existing project's `preview*.png` files, including `preview.png`, `preview-actions-v2.1.2.png`, `preview-settings.png`, `preview-compact.png`, and `preview-mood-happy.png`.
-- The source repository is public under MIT; the existing `LICENSE` file retains the project's attribution.
-- Case study layouts and annotations were created for this portfolio. No new application behavior is depicted.
-- The supplied image values are examples, not a live account readout or performance claim.
+The prototype is a design exploration, not a screenshot of a new Windows release. Original artwork is retained with its license. No client work, commercial outcome, or live account reading is claimed.
