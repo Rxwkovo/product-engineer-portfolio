@@ -20,7 +20,7 @@ def index():
 
 @app.get("/{asset}")
 def static_asset(asset: str):
-    if asset not in {"styles.css", "dashboard.css", "app.js", "sample.csv"}:
+    if asset not in {"styles.css", "dashboard.css", "motion.css", "motion.js", "app.js", "sample.csv", "bricolage-grotesque.ttf"}:
         raise HTTPException(404)
     file = ROOT / ("sample.csv" if asset == "sample.csv" else f"public/{asset}")
     return FileResponse(file)
@@ -55,13 +55,17 @@ def clean_table(original: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
     rows_before = len(df)
     date_columns = []
     cleaned_dates = 0
+    whitespace_trimmed = 0
+    missing_filled = 0
+    dates_unparsed = 0
 
     for column in df.columns:
         if pd.api.types.is_object_dtype(df[column]) or pd.api.types.is_string_dtype(df[column]):
+            text_values = df[column].astype("string")
+            whitespace_trimmed += int((text_values != text_values.str.strip()).fillna(False).sum())
             df[column] = df[column].astype("string").str.strip().replace("", pd.NA)
 
     initial = df.copy()
-    missing_before = int(initial.isna().sum().sum())
 
     df = df.drop_duplicates().reset_index(drop=True)
     duplicates_removed = rows_before - len(df)
@@ -72,13 +76,16 @@ def clean_table(original: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
             nonmissing = int(df[column].notna().sum())
             if nonmissing and int(values.notna().sum()) / nonmissing >= .7:
                 cleaned_dates += int(values.notna().sum())
+                dates_unparsed += int((df[column].notna() & values.isna()).sum())
                 df[column] = values.dt.strftime("%Y-%m-%d").fillna("")
                 date_columns.append(column)
                 continue
         if pd.api.types.is_numeric_dtype(df[column]):
+            missing_filled += int(df[column].isna().sum())
             median = df[column].median()
             df[column] = df[column].fillna(float(median) if pd.notna(median) else 0)
         else:
+            missing_filled += int(df[column].isna().sum())
             df[column] = df[column].fillna("Unknown")
 
     schema = []
@@ -86,14 +93,15 @@ def clean_table(original: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
         kind = "Date" if column in date_columns else "Number" if pd.api.types.is_numeric_dtype(df[column]) else "Text"
         schema.append({"name": column, "type": kind, "missing": int(initial[column].isna().sum()), "unique": int(df[column].nunique(dropna=True))})
 
-    missing_after = int(df.replace("", pd.NA).isna().sum().sum())
     summary = {
         "rows_before": rows_before,
         "rows_after": len(df),
         "columns": len(df.columns),
         "duplicates_removed": duplicates_removed,
-        "missing_filled": max(0, missing_before - missing_after),
+        "missing_filled": missing_filled,
+        "whitespace_trimmed": whitespace_trimmed,
         "dates_standardized": cleaned_dates,
+        "dates_unparsed": dates_unparsed,
         "date_columns": date_columns,
     }
     return df, {"summary": summary, "schema": schema}
@@ -114,10 +122,12 @@ async def process(file: UploadFile = File(...)):
         raise HTTPException(413, "Demo limit: files up to 5 MB")
     frame = read_table(file.filename or "", content)
     cleaned, report = clean_table(frame)
+    original_preview = json.loads(frame.head(8).to_json(orient="records", date_format="iso"))
     preview = json.loads(cleaned.head(8).to_json(orient="records", date_format="iso"))
     return JSONResponse({
         "filename": file.filename,
         **report,
+        "original_preview": original_preview,
         "preview": preview,
         "csv": export_csv(cleaned),
     })
